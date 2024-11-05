@@ -13,3 +13,15 @@
 [x-cloak=''] {
     display: none;
 }
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #FFF;
+    border-radius: 10px;
+}
