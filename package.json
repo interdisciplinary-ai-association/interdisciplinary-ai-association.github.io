@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./public",
-    "dev": "live-server ./public"
+    "start": "http-server .",
+    "dev": "live-server ."
   },
   "keywords": [],
   "author": "",
