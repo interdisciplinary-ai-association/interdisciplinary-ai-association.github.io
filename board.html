@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,45 @@
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
 </head>
+
 <body class="font-inter antialiased bg-black text-gray-900 tracking-tight">
     <div class="flex flex-col min-h-screen overflow-hidden">
 
         <div id="header"></div>
-        
+
 
         <main class="grow">
-            <section class="relative overflow-hidden">
-                <div class="px-16 lg:px-48 py-64 md:py-64 content-start md:h-dvh flex items-center" data-aos="fade-up"
-                    data-aos-duration="1000">
-                    <h3
-                        class="text-center content-center text-white font-bold md:font-bold text-lg md:text-xl leading-relaxed pb-32">
-                        Our board administration compiles of a crowd of AI enthusiasts across different industries, coming together to share the knowledge for AI application ideations.</h3>
-                    <div class="hidden md:block h-16"></div>
+            <section class="relative overflow-hidden flex-row space-x-10">
+                <div class="mx-auto max-w-6xl px-12 sm:px-4">
+                    <div
+                        class="py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+                        <div
+                            class="flex flex-col items-center justify-between place-content-center lg:flex-row lg:gap-8 lg:pb-20 lg:gap-16">
+                            <div class="shrink-0 lg:w-[500px] [&_>*]:pl-7 sm:pb-5 h-[500px]">
+                                <div class="content-center text-start">
+                                    <h1 class="text-4xl leading-normal text-white font-extrabold pb-5"
+                                        data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
+                                        data-aos-anchor="#next-generation">Board
+                                    </h1>
+                                    <p class="text-slate-100 font-medium text-xl" data-aos="fade-up" data-aos-delay="400"
+                                        data-aos-duration="1000" data-aos-anchor="#next-generation">Our board
+                                        administration compiles of a crowd of AI enthusiasts across different
+                                        industries,
+                                        coming together to share the knowledge for AI application ideations.</p>
+                                </div>
+                            </div>
+                            <div class="shrink-0 lg:w-[500px] [&_>*]:pl-7">
+                                <!-- <div class="content-center text-center ">
+                                    <img src="./assets/ai-next-gen.png" height="500px" width="500px"
+                                        style="border-radius: 30%;" data-aos="fade-up" data-aos-delay="500"
+                                        data-aos-duration="1000" data-aos-anchor="#next-generation" />
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
         </main>
 
         <div id="footer"></div>
@@ -35,4 +59,5 @@
     <script src="./js/main.js"></script>
     <script src="./js/loadComponents.js"></script>
 </body>
+
 </html>
