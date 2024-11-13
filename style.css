@@ -948,6 +948,10 @@ input[type='search']::-webkit-search-results-decoration {
   height: 2rem;
 }
 
+.h-\[500px\]{
+  height: 500px;
+}
+
 .h-\[75px\]{
   height: 75px;
 }
@@ -1058,6 +1062,10 @@ input[type='search']::-webkit-search-results-decoration {
   list-style-type: none;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1104,6 +1112,12 @@ input[type='search']::-webkit-search-results-decoration {
 
 .gap-4{
   gap: 1rem;
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-20 > :not([hidden]) ~ :not([hidden]){
@@ -1233,11 +1247,6 @@ input[type='search']::-webkit-search-results-decoration {
   padding-bottom: 3rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1253,12 +1262,24 @@ input[type='search']::-webkit-search-results-decoration {
   padding-bottom: 2rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
 .pb-32{
   padding-bottom: 8rem;
 }
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pt-32{
+  padding-top: 8rem;
 }
 
 .text-center{
@@ -1765,12 +1786,6 @@ input[type='search']::-webkit-search-results-decoration {
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 1.277;
-    letter-spacing: -0.01em;
-  }
-
-  .md\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.5;
     letter-spacing: -0.01em;
   }
 
