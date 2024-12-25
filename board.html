@@ -19,17 +19,19 @@
             <section class="relative overflow-hidden flex-row space-x-10">
                 <div class="mx-auto max-w-6xl px-12 sm:px-4">
                     <div
-                        class="py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+                        class="py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-36">
                         <div
-                            class="flex flex-col items-center justify-between place-content-center lg:flex-row lg:gap-8 lg:pb-20 lg:gap-16">
-                            <div class="shrink-0 lg:w-[500px] [&_>*]:pl-7 sm:pb-5 h-[500px]">
+                            class="flex flex-col items-center justify-between place-content-center lg:flex-row lg:gap-8 lg:gap-16">
+                            <div class="shrink-0 lg:w-[500px] [&_>*]:pl-7 sm:pb-5">
                                 <div class="content-center text-start">
-                                    <h1 class="text-4xl leading-normal text-white font-extrabold pb-5"
+                                    <h1 class="text-6xl leading-normal text-white font-extrabold pb-5"
                                         data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
-                                        data-aos-anchor="#next-generation">Board
+                                        data-aos-anchor="#next-generation"
+                                        style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">Board
                                     </h1>
-                                    <p class="text-slate-100 font-medium text-xl" data-aos="fade-up" data-aos-delay="400"
-                                        data-aos-duration="1000" data-aos-anchor="#next-generation">Our board
+                                    <p class="text-slate-100 font-medium text-xl" data-aos="fade-up"
+                                        data-aos-delay="400" data-aos-duration="1000"
+                                        data-aos-anchor="#next-generation">Our board
                                         administration compiles of a crowd of AI enthusiasts across different
                                         industries,
                                         coming together to share the knowledge for AI application ideations.</p>
@@ -47,6 +49,10 @@
                 </div>
             </section>
 
+            <section class="relative overflow-hidden flex justify-center">
+                <div id="staff-container" class="grid grid-cols-1 lg:grid-cols-3 gap-12 my-20"></div>
+            </section>
+
         </main>
 
         <div id="footer"></div>
@@ -58,6 +64,7 @@
     <script src="./js/vendors/aos.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/loadComponents.js"></script>
+    <script src="./includes/js-templates/staff-card.js" type="module"></script>
 </body>
 
 </html>

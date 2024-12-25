@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    z-index: -1;
+}
+
+body {
+    background-color: #0e0e0e;
+    /* overflow: hidden; */
+}
+
+/* Container for the SVG */
+.circuit-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Base Path */
+.base-path {
+    stroke: #333;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Animated Path */
+.animated-path {
+    stroke: #007cff;
+    /* Neon Green */
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: propagate 2s linear infinite;
+}
+
+@keyframes propagate {
+    0% {
+        stroke-dashoffset: 300;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -300;
+    }
+}

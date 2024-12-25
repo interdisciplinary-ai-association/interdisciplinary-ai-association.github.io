@@ -18,5 +18,4 @@ Navigate to root directory and run ```npm run dev```. _This command is purely fo
 
 ## Important Notes
 
-_None as of now_
-
+* do `npx tailwindcss -i ./css/style.css -o ./style.css --watch` for updating style.css

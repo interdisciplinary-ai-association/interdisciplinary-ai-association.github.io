@@ -17,7 +17,7 @@
 
 
         <main class="grow">
-            <section class="relative overflow-hidden h-screen">
+            <section class="relative overflow-hidden h-fit">
                 <div style="
                         position: absolute;
                         left: 0;
@@ -33,27 +33,34 @@
                         filter: blur(1px); /* Adjust the blur level here */
                         z-index: -1;
                     " data-aos="zoom-in" data-aos-duration="1000"></div>
-                <div class="px-16 lg:px-48 content-start h-full flex items-center justify-center"
+                <div class="py-64 px-16 lg:px-48 content-start h-3/4 items-center justify-center"
                     style="background-color: rgba(0, 0, 0, 0.75);">
-                    <h1 class="text-center content-center text-white font-bold text-xl md:text-4xl leading-relaxed mb-0"
-                        data-aos="fade-up" data-aos-duration="1000">
-                        Our vision
-                        is to construct a network of open-minded individuals who contribute to the next-generation
-                        society supported by artificial intelligence.
+                    <h1 class="text-start content-center text-white font-medium text-5xl leading-relaxed mb-0"
+                        data-aos="fade-up" data-aos-duration="1000"
+                        style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">
+                        Youth Empowerment for a AI-driven Future
                     </h1>
+                    <h2 class="text-start content-center text-white font-medium text-2xl leading-relaxed mb-0"
+                        data-aos="fade-up" data-aos-duration="1000">
+                        We empower youth across the world to develop their potential and acquire the essential hard
+                        and soft skills to become agile and adaptive leaders in the dynamic digital era, shaping a more
+                        sustainable future with collaborative efforts.
+                    </h2>
+                    <div class="block h-1/4"></div>
                 </div>
             </section>
-
-            <section class="relative overflow-hidden flex content-center justify-center items-center pt-32 pb-16 space-x-20">
+            <!-- relative flex flex-col items-center overflow-hidden justify-between content-center justify-center items-center md:flex-row md:gap-8 md:pb-20 md:gap-16 space-y-10 lg:space-x-10 -->
+            <section
+                class="relative flex flex-col items-center overflow-hidden content-center justify-center items-center md:flex-row md:gap-8 md:pb-10 md:pt-20 md:gap-16 space-y-10 md:space-y-0 md:space-x-20">
                 <a href="./board.html"><button class="kave-btn text-base font-bold">
                         <span class="kave-line"></span>
                         Board
                     </button></a>
                 <!-- <>it should work</> -->
                 <a href="./advisors.html"><button class="kave-btn text-base font-bold">
-                    <span class="kave-line"></span>
-                    Advisors
-                </button></a>
+                        <span class="kave-line"></span>
+                        Advisors
+                    </button></a>
             </section>
 
             <section class="relative overflow-hidden" id="next-generation">
@@ -61,7 +68,7 @@
                     <div
                         class="py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
                         <div
-                            class="flex flex-col items-center justify-between place-content-center lg:flex-row lg:gap-8 lg:pb-20 lg:gap-16">
+                            class="flex flex-col items-center justify-between place-content-center lg:flex-row lg:gap-8 lg:gap-16">
                             <div class="shrink-0 lg:w-[500px] [&_>*]:pl-7 pb-10">
                                 <div class="content-center text-start">
                                     <h1 class="text-3xl leading-normal text-white font-extrabold pb-5"
