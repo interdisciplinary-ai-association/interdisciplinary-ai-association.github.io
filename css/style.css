@@ -8,6 +8,7 @@
 @import 'additional-styles/theme.css';
 @import 'additional-styles/custom-fonts.css';
 @import 'tailwindcss/utilities';
+@import 'circuitry-background.css';
 
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=''] {
@@ -101,4 +102,18 @@
 
 .kave-btn:hover .kave-line:after {
     top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Default for small screens */
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on medium screens and above */
+    }
 }
