@@ -1012,6 +1012,10 @@ input[type='search']::-webkit-search-results-decoration {
   height: fit-content;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
