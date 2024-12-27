@@ -14,9 +14,9 @@ class StaffCard extends HTMLElement {
         <style>
           .staff-card {
             background: linear-gradient(145deg, #1b1b1b, #0a0a0a);
-            border: 1px solid #00ffcc;
+            border: 1px solid #73E2FE;
+            box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            box-shadow: 0px 0px 15px 2px #00ffcc;
             padding: 20px;
             margin-left: 50px;
             margin-right: 50px;
@@ -29,14 +29,16 @@ class StaffCard extends HTMLElement {
           .staff-card:hover {
             transform: scale(1.05);
             cursor: pointer;
-            box-shadow: 0px 0px 25px 5px #00ffcc;
+            box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.3),
+              0 0 25px 5px #64e4b7, 0 0 50px 10px #a7b8ff, 0 0 75px 15px #bf70e5;
           }
           .staff-card img {
             border-radius: 50%;
-            border: 2px solid #00ffcc;
-            width: 120px;
-            height: 120px;
+            border: 2px solid #73E2FE;
+            width: 140px;
+            height: 140px;
             margin-bottom: 10px;
+            object-fit: cover;
           }
           .staff-card h2 {
             font-size: 1.2rem;

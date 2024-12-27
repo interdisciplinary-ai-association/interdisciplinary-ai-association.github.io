@@ -7,35 +7,47 @@ AOS.init({
 
 /** Render user profile */
 
-const staffData = [
+const founderData = [
     {
-        name: "Jane Doe",
-        role: "CEO",
-        bio: "Jane has 15 years of experience leading AI startups and loves building innovative solutions.",
+        name: "Charmaine Hung",
+        role: "Founder",
+        bio: "Medical Student @ HKU",
+        image: "../assets/founder-images/Charmaine-Hung.png",
+    },
+    {
+        name: "Adrian So",
+        role: "Founder",
+        bio: "Medical Student @ HKU",
         image: "https://via.placeholder.com/150",
     },
     {
-        name: "John Smith",
-        role: "CTO",
-        bio: "John is a tech visionary with expertise in machine learning and cloud infrastructure.",
+        name: "Marco Lee",
+        role: "Founder",
+        bio: "Law Student @ HKU",
         image: "https://via.placeholder.com/150",
     },
     {
-        name: "Alice Johnson",
-        role: "COO",
-        bio: "Alice is an expert in operational strategies and excels in team management.",
+        name: "Anson Chan",
+        role: "Founder",
+        bio: "Engineering PhD Candidate @ Cambridge",
         image: "https://via.placeholder.com/150",
     },
     {
-        name: "Bob Brown",
-        role: "Lead Data Scientist",
-        bio: "Bob specializes in data-driven AI solutions and has a decade of experience in the field.",
+        name: "Koni Lau",
+        role: "Founder",
+        bio: "Psychology @ CUHK",
+        image: "https://via.placeholder.com/150",
+    },
+    {
+        name: "Connie Wong",
+        role: "Founder",
+        bio: "Property Management @ PolyU",
         image: "https://via.placeholder.com/150",
     },
 ];
 
 function renderStaffCards(staff) {
-    const container = document.getElementById("staff-container");
+    const container = document.getElementById("founder-container");
     staff.forEach(({ name, role, bio, image }) => {
         const staffCard = document.createElement("staff-card");
         staffCard.setAttribute("name", name);
@@ -47,7 +59,7 @@ function renderStaffCards(staff) {
 }
 
 // Render the staff cards in the 3-column grid
-renderStaffCards(staffData);
+renderStaffCards(founderData);
 
 
 // function loadComponent(id, file) {

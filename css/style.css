@@ -9,6 +9,7 @@
 @import 'additional-styles/custom-fonts.css';
 @import 'tailwindcss/utilities';
 @import 'circuitry-background.css';
+@import 'clickable-pyramid.css';
 
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=''] {
