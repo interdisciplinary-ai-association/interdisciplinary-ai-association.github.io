@@ -3,138 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youth Empowerment - IAIA</title>
+  <title>3D Pyramid</title>
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
+    /* General styling */
     body {
-      background: linear-gradient(135deg, #5B2A91, #001848);
-      color: #ffffff;
-      line-height: 1.6;
-      min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 20px;
-      overflow: hidden; /* Prevent scrollbars */
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      perspective: 1000px; /* Add perspective for 3D effect */
+    }
+
+    .pyramid {
       position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d; /* Enable 3D transformation */
+      transform: rotateX(30deg) rotateY(-30deg);
     }
 
-    /* Content Container */
-    .container {
-      background-color: rgba(20, 20, 50, 0.8);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-      max-width: 700px;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .container h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-
-    .container h1 span {
-      font-style: italic;
-    }
-
-    .content {
-      text-align: justify;
-      line-height: 1.8;
-    }
-
-    .content p {
-      margin-bottom: 20px;
-    }
-
-    .line {
-      height: 1px;
-      width: 50px;
-      background-color: #00CFCF;
-      margin: 20px auto;
-    }
-
-    /* Background Circles */
-    .circle {
+    .layer {
       position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 255, 255, 0.6), transparent);
-      filter: blur(40px);
-      opacity: 0;
-      animation: enlargeAndFade 15s linear forwards;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 200, 0, 0.8);
+      border: 1px solid #000;
+      box-sizing: border-box;
+      transition: transform 0.3s, z-index 0.3s; /* Smooth hover animation */
     }
 
-    @keyframes enlargeAndFade {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      30% {
-        opacity: 0.6;
-      }
-      100% {
-        transform: scale(3); /* Grow to 3x size */
-        opacity: 0;
-      }
+    .layer1 {
+      transform: translateZ(-50px) scale(0.8); /* Smaller base layer */
+    }
+
+    .layer2 {
+      transform: translateZ(0px) scale(0.9);
+    }
+
+    .layer3 {
+      transform: translateZ(50px) scale(1);
+    }
+
+    .layer:hover {
+      transform: scale(1.2); /* Enlarge on hover */
+      z-index: 10; /* Bring layer to the front */
     }
   </style>
 </head>
 <body>
-  <!-- Content -->
-  <div class="container">
-    <h1><span>Youth</span> Empowerment</h1>
-    <div class="line"></div>
-    <div class="content">
-      <p>IAIA is committed to supporting the comprehensive professional development of youngsters and empowering them to take on leadership roles in the future.</p>
-      <p>IAIA advocates ethical AI use and development and aims to instill ethical considerations and a sense of social responsibility in the new generation, preparing them to harness AI to create positive impacts while mitigating potential risks.</p>
-    </div>
+  <div class="pyramid">
+    <div class="layer layer1"></div>
+    <div class="layer layer2"></div>
+    <div class="layer layer3"></div>
   </div>
 
-  <!-- JavaScript for Dynamic Circles -->
   <script>
-    const numCircles = 10; // Number of circles to spawn
-    const body = document.body;
-
-    function createCircle() {
-      const circle = document.createElement("div");
-      circle.classList.add("circle");
-
-      // Randomize size, position, and duration
-      const size = Math.random() * 80 + 50; // Size between 50px and 130px
-      const posX = Math.random() * window.innerWidth; // Random X position
-      const posY = Math.random() * window.innerHeight; // Random Y position
-      const duration = Math.random() * 20 + 10; // Duration between 10s and 30s
-
-      circle.style.width = `${size}px`;
-      circle.style.height = `${size}px`;
-      circle.style.left = `${posX}px`;
-      circle.style.top = `${posY}px`;
-      circle.style.animationDuration = `${duration}s`;
-
-      body.appendChild(circle);
-
-      // Remove the circle after animation ends and respawn
-      setTimeout(() => {
-        circle.remove();
-        createCircle(); // Spawn a new circle
-      }, duration * 1000);
-    }
-
-    // Initialize circles
-    for (let i = 0; i < numCircles; i++) {
-      createCircle();
-    }
+    document.querySelectorAll('.layer').forEach(layer => {
+      layer.addEventListener('mouseenter', () => {
+        layer.style.transform += ' scale(1.2)';
+      });
+      layer.addEventListener('mouseleave', () => {
+        layer.style.transform = layer.style.transform.replace(' scale(1.2)', '');
+      });
+    });
   </script>
 </body>
 </html>

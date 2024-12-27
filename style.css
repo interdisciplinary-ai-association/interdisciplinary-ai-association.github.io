@@ -1028,6 +1028,11 @@ input[type='search']::-webkit-search-results-decoration {
   width: 200px;
 }
 
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full{
   width: 100%;
 }
@@ -1214,6 +1219,10 @@ input[type='search']::-webkit-search-results-decoration {
 
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-gray-200{
@@ -1403,6 +1412,10 @@ input[type='search']::-webkit-search-results-decoration {
   font-weight: 800;
 }
 
+.font-light{
+  font-weight: 300;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -1415,8 +1428,8 @@ input[type='search']::-webkit-search-results-decoration {
   font-weight: 600;
 }
 
-.italic{
-  font-style: italic;
+.font-thin{
+  font-weight: 100;
 }
 
 .leading-normal{
@@ -1600,6 +1613,268 @@ body {
   100% {
     stroke-dashoffset: -300;
   }
+}
+
+.pyramid-wrapper {
+  position: relative;
+  width: 1000px;
+  /* Fixed width for pyramid */
+  height: 500px;
+  /* Fixed height for pyramid */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top Pyramid */
+
+.top-pyramid {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  /* Top pyramid takes half of the wrapper */
+  z-index: 10;
+  transform: translate(0, 50%);
+  transition: transform 0.3s ease;
+  /* Add smooth transform effect */
+  clip-path: polygon(50% 0, 60% 25%, 50% 40%, 40% 25%);
+  /* Same clip-path as the visible pyramid shape */
+  pointer-events: auto;
+}
+
+.top-pyramid:hover {
+  transform: scale(1.2) translate(0, 40%);
+  /* Enlarge the top pyramid */
+  cursor: pointer;
+}
+
+/* Layers of Top Pyramid */
+
+.top-pyramid div:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom left, #9c8be1, #CEA3F4);
+  clip-path: polygon(50% 0, 50% 40%, 40% 25%);
+}
+
+.top-pyramid div:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d4cad;
+  clip-path: polygon(50% 0, 50% 40%, 60% 25%);
+}
+
+/* Middle Pyramid */
+
+.mid-pyramid {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  /* Middle pyramid takes half of the wrapper */
+  z-index: 8;
+  transform: translate(0, -40%);
+  transition: transform 0.3s ease;
+  /* Add smooth transform effect */
+  clip-path: polygon(25% 25%, 15% 40%, 50% 80%, 85% 40%, 75% 25%, 50% 12.5%);
+  /* Same clip-path as the visible pyramid shape */
+  pointer-events: auto;
+}
+
+.mid-pyramid:hover {
+  transform: scale(1.2) translate(0, -30%);
+  cursor: pointer;
+}
+
+.mid-pyramid div:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom left, #9c8be1, #7077d1);
+  z-index: -1;
+  clip-path: polygon(37.5% 25%, 35% 45%, 50% 80%, 50% 50%);
+}
+
+.mid-pyramid div:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d4cad;
+  z-index: -1;
+  clip-path: polygon(62.5% 25%, 65% 45%, 50% 80%, 50% 50%);
+}
+
+.mid-pyramid div:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #033d9a, #0c2c69);
+  z-index: -1;
+  clip-path: polygon(37.5% 25%, 50% 12.5%, 62.5% 25%, 50% 50%);
+}
+
+/* Bottom Pyramid */
+
+.bot-pyramid {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  /* Middle pyramid takes half of the wrapper */
+  z-index: 6;
+  transform: translate(0, -100%);
+  transition: transform 0.3s ease;
+  /* Add smooth transform effect */
+  clip-path: polygon(32.5% 25%, 30% 45%, 50% 90%, 70% 45%, 67.5% 25%, 50% 10%);
+  /* Same clip-path as the visible pyramid shape */
+  pointer-events: auto;
+}
+
+.bot-pyramid:hover {
+  transform: scale(1.2) translate(0, -80%);
+  cursor: pointer;
+}
+
+.bot-pyramid div:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, #4964c2, #1d4fb1);
+  z-index: -1;
+  clip-path: polygon(32.5% 25%, 30% 45%, 50% 90%, 50% 60%);
+}
+
+.bot-pyramid div:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d4cad;
+  z-index: -1;
+  clip-path: polygon(67.5% 25%, 70% 45%, 50% 90%, 50% 60%);
+}
+
+.bot-pyramid div:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #033d9a, #0c2c69);
+  z-index: -1;
+  clip-path: polygon(32.5% 25%, 50% 10%, 67.5% 25%, 50% 60%);
+}
+
+.mid-pyramid-annotation,
+.top-pyramid-annotation,
+.bot-pyramid-annotation {
+  visibility: hidden;
+  opacity: 0;
+  /* Use opacity for fade-in effect */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+
+/* Annotation Visibility on Hover */
+
+.top-pyramid:hover~.top-pyramid-annotation {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mid-pyramid:hover~.mid-pyramid-annotation {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bot-pyramid:hover~.bot-pyramid-annotation {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Intro Head (Circle) */
+
+.pyramid-wrapper .top-pyramid-annotation .intro-head,
+.pyramid-wrapper .mid-pyramid-annotation .intro-head,
+.pyramid-wrapper .bot-pyramid-annotation .intro-head {
+  position: absolute;
+  background-color: white;
+  z-index: 20;
+  width: 30px;
+  /* Circle size */
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Circle Positions */
+
+.pyramid-wrapper .top-pyramid-annotation .intro-head {
+  left: 62.5%;
+  /* Adjust position relative to the pyramid */
+  top: 20%;
+  /* Align vertically */
+}
+
+.pyramid-wrapper .mid-pyramid-annotation .intro-head {
+  left: 27.5%;
+  top: 35%;
+}
+
+.pyramid-wrapper .bot-pyramid-annotation .intro-head {
+  left: 75%;
+  top: 47.5%;
+}
+
+/* Intro (Textbox) */
+
+.pyramid-wrapper .top-pyramid-annotation .intro,
+.pyramid-wrapper .mid-pyramid-annotation .intro,
+.pyramid-wrapper .bot-pyramid-annotation .intro {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.727);
+  /* White with slight transparency */
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  /* Optional shadow for better visibility */
+}
+
+/* Textbox Placement */
+
+.pyramid-wrapper .top-pyramid-annotation .intro {
+  left: 68.5%;
+  /* Adjust relative to the circle */
+  top: 19.5%;
+  /* Align vertically with the circle */
+}
+
+.pyramid-wrapper .mid-pyramid-annotation .intro {
+  right: 75%;
+  top: 34.5%;
+  /* Align vertically with the circle */
+}
+
+.pyramid-wrapper .bot-pyramid-annotation .intro {
+  left: 80.5%;
+  top: 47%;
 }
 
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
