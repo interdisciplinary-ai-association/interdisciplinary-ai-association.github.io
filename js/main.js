@@ -18,13 +18,13 @@ const founderData = [
         name: "Adrian So",
         role: "Founder",
         bio: "Medical Student @ HKU",
-        image: "https://via.placeholder.com/150",
+        image: "../assets/founder-images/So_Ching_Hei.jpg",
     },
     {
         name: "Marco Lee",
         role: "Founder",
         bio: "Law Student @ HKU",
-        image: "https://via.placeholder.com/150",
+        image: "../assets/founder-images/Marco Lee.jpg",
     },
     {
         name: "Anson Chan",
