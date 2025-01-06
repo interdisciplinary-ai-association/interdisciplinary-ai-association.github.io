@@ -9,7 +9,12 @@ function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// Function to create a path with multiple turns
+function setPathAnimation(path) {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+}
+
 function createDiversePath(startX, startY) {
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
@@ -19,11 +24,11 @@ function createDiversePath(startX, startY) {
 
     // Build the path data with random turns
     let pathData = `M ${currentX} ${currentY}`;
-    const segmentCount = Math.floor(Math.random() * 4) + 2; // 2 to 5 segments
+    const segmentCount = Math.floor(Math.random() * 4) + 3; // 2 to 5 segments
 
     for (let i = 0; i < segmentCount; i++) {
         const direction = Math.floor(Math.random() * 4); // 0: right, 1: left, 2: up, 3: down
-        const length = Math.random() * 100 + 50; // Segment length (50 to 150px)
+        const length = Math.random() * 60 + 20; // Segment length (50 to 100px)
 
         switch (direction) {
             case 0: currentX += length; break; // Right
@@ -47,12 +52,15 @@ function createDiversePath(startX, startY) {
 
     // Randomize color and speed
     const randomColor = getRandomColor();
-    const randomDuration = Math.random() * 5 + 2; // Random duration between 2s and 7s
-    const delay = Math.random() * 3; // Random delay (0 to 3s)
+    const randomDuration = 5; // Duration: 5s
+    const delay = Math.random() * 5 + 1; // Random delay (0 to 3s)
 
     animatedPath.style.stroke = randomColor;
     animatedPath.style.animationDuration = `${randomDuration}s`;
     animatedPath.style.animationDelay = `${delay}s`;
+
+    // Set stroke length for animation
+    setPathAnimation(animatedPath);
 
     svg.appendChild(animatedPath);
 }

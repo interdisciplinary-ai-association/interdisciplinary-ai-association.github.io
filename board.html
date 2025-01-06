@@ -7,13 +7,13 @@
     <title>IAIA - Board</title>
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/IAIA_logo_white.png">
 </head>
 
 <body class="font-inter antialiased bg-black text-gray-900 tracking-tight">
     <div class="flex flex-col min-h-screen overflow-hidden">
 
         <div id="header"></div>
-
 
         <main class="grow">
             <section class="relative overflow-hidden flex-row space-x-10">
@@ -26,7 +26,6 @@
                                 <div class="content-center text-start">
                                     <h1 class="text-6xl leading-normal text-white font-extrabold pb-5"
                                         data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
-                                        data-aos-anchor="#next-generation"
                                         style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">Board
                                     </h1>
                                     <p class="text-slate-100 font-medium text-xl" data-aos="fade-up"
@@ -51,13 +50,27 @@
 
             <section class="relative overflow-hidden flex justify-center">
                 <div class="mx-auto max-w-6xl px-12">
-                    <h1 class="text-4xl leading-normal text-white font-extrabold" data-aos="fade-up"
-                        data-aos-delay="300" data-aos-duration="1000" data-aos-anchor="#next-generation"
-                        style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">
-                        Founders
-                    </h1>
-                    <div id="founder-container" class="grid grid-cols-1 lg:grid-cols-3 gap-12 my-20" data-aos="fade-up"
-                        data-aos-delay="300" data-aos-duration="1000"></div>
+                    <div class="flex flex-row justify-center gap:8 md:gap-12">
+                        <a id="founder-tab" href="#founder"
+                            class="tab active text-4xl leading-normal text-white font-extrabold"
+                            data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
+                            style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">
+                            Founders
+                        </a>
+                        <a id="director-tab" href="#director" class="tab text-4xl leading-normal text-white font-extrabold"
+                            data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
+                            style="font-family: 'FontsFree Net Engravers Gothic', sans-serif;">
+                            Directors
+                        </a>
+                    </div>
+                    <div class="slider-container">
+                        <div id="slider" class="slider flex transition-transform duration-500">
+                            <div id="founder-container" class="grid grid-cols-1 lg:grid-cols-3 gap-12 my-20"
+                                data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"></div>
+                            <div id="director-container" class="grid grid-cols-1 lg:grid-cols-3 gap-12 my-20"
+                                data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

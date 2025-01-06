@@ -1,16 +1,17 @@
 class StaffCard extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: 'open' });
-    }
-  
-    connectedCallback() {
-      const name = this.getAttribute('name') || 'Unknown';
-      const role = this.getAttribute('role') || 'Role not specified';
-      const bio = this.getAttribute('bio') || 'No biography provided.';
-      const image = this.getAttribute('image') || 'https://via.placeholder.com/150';
-  
-      this.shadowRoot.innerHTML = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    const name = this.getAttribute('name') || 'Unknown';
+    const role = this.getAttribute('role') || 'Role not specified';
+    const bio = this.getAttribute('bio') || 'No biography provided.';
+    const image = this.getAttribute('image') || 'https://via.placeholder.com/150';
+    const url = this.getAttribute('url') || '#';
+
+    this.shadowRoot.innerHTML = `
         <style>
           .staff-card {
             background: linear-gradient(145deg, #1b1b1b, #0a0a0a);
@@ -24,6 +25,7 @@ class StaffCard extends HTMLElement {
             margin-bottom: 30px;
             width: 200px;
             text-align: center;
+            z-index: 100;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
           }
           .staff-card:hover {
@@ -56,14 +58,16 @@ class StaffCard extends HTMLElement {
             color: #ddd;
           }
         </style>
-        <div class="staff-card">
-          <img src="${image}" alt="${name}">
-          <h2>${name}</h2>
-          <h3>${role}</h3>
-          <p>${bio}</p>
-        </div>
+        <a href="${url}" style="text-decoration: none;">
+          <div class="staff-card">
+            <img src="${image}" alt="${name}">
+            <h2>${name}</h2>
+            <h3>${role}</h3>
+            <p>${bio}</p>
+          </div>
+        </a>
       `;
-    }
   }
-  
-  customElements.define('staff-card', StaffCard);
+}
+
+customElements.define('staff-card', StaffCard);

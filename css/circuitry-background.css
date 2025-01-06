@@ -6,8 +6,8 @@
 
 .background {
 
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
     z-index: -1;
 }
 
@@ -37,9 +37,8 @@ body {
     stroke-width: 2;
     fill: none;
     stroke-linecap: round;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
     animation: propagate 2s linear infinite;
+    -webkit-animation: propagate 2s linear infinite;
 }
 
 @keyframes propagate {
