@@ -167,8 +167,19 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 1;
+}
+
+@media (max-width: 1028px) {
+    .mid-pyramid-annotation,
+    .top-pyramid-annotation,
+    .bot-pyramid-annotation {
+        width: 100vw;
+        height: 100vh;
+        z-index: 50;
+    }
 }
 
 /* Annotation Visibility on Hover */
@@ -198,6 +209,14 @@
     /* Circle size */
     height: 30px;
     border-radius: 50%;
+}
+
+@media (max-width: 1028px) {
+    .pyramid-wrapper .top-pyramid-annotation .intro-head,
+    .pyramid-wrapper .mid-pyramid-annotation .intro-head,
+    .pyramid-wrapper .bot-pyramid-annotation .intro-head {
+        display: none;
+    }
 }
 
 /* Circle Positions */
@@ -233,21 +252,35 @@
     /* Optional shadow for better visibility */
 }
 
-/* Textbox Placement */
-.pyramid-wrapper .top-pyramid-annotation .intro {
-    left: 68.5%;
-    /* Adjust relative to the circle */
-    top: 19.5%;
-    /* Align vertically with the circle */
+@media (max-width: 1028px) {
+    .pyramid-wrapper .top-pyramid-annotation .intro,
+    .pyramid-wrapper .mid-pyramid-annotation .intro,
+    .pyramid-wrapper .bot-pyramid-annotation .intro {
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+        top: 35%;
+        z-index: 50;
+    }
+    
 }
 
-.pyramid-wrapper .mid-pyramid-annotation .intro {
-    right: 75%;
-    top: 34.5%;
-    /* Align vertically with the circle */
-}
-
-.pyramid-wrapper .bot-pyramid-annotation .intro {
-    left: 80.5%;
-    top: 47%;
+@media (min-width: 1028px) {
+    .pyramid-wrapper .top-pyramid-annotation .intro {
+        left: 68.5%;
+        /* Adjust relative to the circle */
+        top: 19.5%;
+        /* Align vertically with the circle */
+    }
+    
+    .pyramid-wrapper .mid-pyramid-annotation .intro {
+        right: 75%;
+        top: 34.5%;
+        /* Align vertically with the circle */
+    }
+    
+    .pyramid-wrapper .bot-pyramid-annotation .intro {
+        left: 80.5%;
+        top: 47%;
+    }
 }

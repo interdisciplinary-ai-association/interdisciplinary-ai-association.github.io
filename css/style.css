@@ -118,3 +118,40 @@
         /* 3 columns on medium screens and above */
     }
 }
+
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transform: translateX(0);
+    width: 200%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+    height: fit-content;
+}
+
+.tab.active {
+    color: #ffffff;
+}
+
+.tab:not(.active):hover {
+    color: #cccccc;
+}
+
+.tab:not(.active) {
+    color: #434343;
+}
