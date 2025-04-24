@@ -1367,6 +1367,10 @@ input[type='search']::-webkit-search-results-decoration {
   padding-bottom: 2.5rem;
 }
 
+.pb-32{
+  padding-bottom: 8rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -2269,12 +2273,20 @@ body {
     margin-top: 1.25rem;
   }
 
+  .md\:block{
+    display: block;
+  }
+
   .md\:flex{
     display: flex;
   }
 
   .md\:hidden{
     display: none;
+  }
+
+  .md\:h-dvh{
+    height: 100dvh;
   }
 
   .md\:grow{
@@ -2335,6 +2347,16 @@ body {
 
   .md\:pb-10{
     padding-bottom: 2.5rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 1.277;
+    letter-spacing: -0.01em;
+  }
+
+  .md\:font-bold{
+    font-weight: 700;
   }
 }
 
